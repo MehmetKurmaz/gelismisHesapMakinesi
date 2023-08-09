@@ -104,6 +104,35 @@ public class Main {
 
         System.out.println("Sonuc : " + result);
     }
+    static void mod(){
+        System.out.print("1. Sayiyi Giriniz :");
+        Scanner scanner=new Scanner(System.in);
+        int number1,number2;
+        number1=scanner.nextInt();
+        System.out.print("2. Sayiyi Giriniz :");
+        number2=scanner.nextInt();
+        double result=number1%number2;
+        System.out.println("MOD :"+result);
+    }
+    static void perimeterOfaRectangle(){
+        System.out.print("Dikdorgenin uzun Kenari :");
+        Scanner scanner=new Scanner(System.in);
+        double longEdge=scanner.nextDouble();
+        System.out.print("Dikdorgenin Kisa Kenari :");
+        double shortEdge=scanner.nextDouble();
+        double perimeter=2*(longEdge+shortEdge);
+        System.out.print("Dikdorgenin  Cevresi :"+perimeter);
+    }
+    static void areaOfaRectangle(){
+        System.out.print("Dikdorgenin uzun Kenari :");
+        Scanner scanner=new Scanner(System.in);
+        double longEdge=scanner.nextDouble();
+        System.out.print("Dikdorgenin Kisa Kenari :");
+        double shortEdge=scanner.nextDouble();
+        double area=longEdge*shortEdge;
+        System.out.print("Dikdorgenin  Alani :"+area);
+
+    }
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int select;
@@ -114,7 +143,8 @@ public class Main {
                 + "5- Uslu Sayi Hesaplama\n"
                 + "6- Faktoriyel Hesaplama\n"
                 + "7- Mod Alma\n"
-                + "8- Dikdortgen Alan ve Cevre Hesabi\n"
+                + "8- Dikdortgen Alan Hesabi\n"
+                + "9- Dikdortgen Cevre Hesabi\n"
                 + "0- Cikis Yap";
 
         do {
@@ -139,6 +169,15 @@ public class Main {
                     break;
                 case 6:
                     factorial();
+                    break;
+                case 7:
+                    mod();
+                    break;
+                case 8:
+                    areaOfaRectangle();
+                    break;
+                case 9:
+                    perimeterOfaRectangle();
                     break;
                 case 0:
                     break;
